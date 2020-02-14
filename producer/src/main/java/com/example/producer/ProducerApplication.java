@@ -1,4 +1,4 @@
-package com.example.rsocketproducer;
+package com.example.producer;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -14,7 +14,7 @@ import java.time.Instant;
 
 @RequiredArgsConstructor
 @SpringBootApplication
-public class RsocketProducerApplication {
+public class ProducerApplication {
 
 	private final RocketMQTemplate rocketMQTemplate;
 
@@ -30,7 +30,7 @@ public class RsocketProducerApplication {
 	}
 
 	public static void main(String[] args) {
-		SpringApplication.run(RsocketProducerApplication.class, args);
+		SpringApplication.run(ProducerApplication.class, args);
 	}
 }
 

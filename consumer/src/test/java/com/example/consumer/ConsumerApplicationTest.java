@@ -1,4 +1,4 @@
-package com.example.rsocketconsumer;
+package com.example.consumer ;
 
 import org.junit.jupiter.api.Test;
 
