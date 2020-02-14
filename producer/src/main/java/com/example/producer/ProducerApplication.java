@@ -25,8 +25,6 @@ public class ProducerApplication {
 			this.rocketMQTemplate.convertAndSend(
 				"greetings-topic", new Greeting("Hello @ " + name + " @ " + now.toString()));
 		}
-
-
 	}
 
 	public static void main(String[] args) {
