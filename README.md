@@ -1,4 +1,4 @@
-# Spring Tips RSocket  
+# Spring Tips (Apache RocketMQ)
 
 In order to use this you'll need to follow the steps in the [RocketMQ](https://rocketmq.apache.org/docs/quick-start/) quickguide. 
 
