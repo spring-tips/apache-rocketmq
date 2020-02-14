@@ -2,6 +2,8 @@
 
 In order to use this you'll need to follow the steps in the [RocketMQ](https://rocketmq.apache.org/docs/quick-start/) quickguide. 
 
+This guide introduces Apache RocketMQ, originally a technology devloped and used internally at Alibaba.
+
 Also, be sure you're using Java 8. The newer ones don't work so well. If you're on a Mac, you can use:
 
 ```
