@@ -23,10 +23,13 @@ public class ProducerApplication {
 	@Bean
 	ApplicationListener<ApplicationReadyEvent> ready(RocketMQTemplate template) {
 		return event -> {
+
 			var now = Instant.now();
+			var destination = "greetings-topic";
+
 			for (var name : "Tammie,Kimly,Josh,Rob,Mario,Mia".split(",")) {
+
 				var payload = new Greeting("Hello @ " + name + " @ " + now.toString());
-				var destination = "greetings-topic";
 				var messagePostProcessor = new MessagePostProcessor() {
 
 					@Override
