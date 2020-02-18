@@ -10,8 +10,11 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.stereotype.Service;
 
+import static org.apache.rocketmq.spring.annotation.SelectorType.SQL92;
+
 @SpringBootApplication
-public class  ConsumerApplication {
+public class ConsumerApplication {
+
 	public static void main(String[] args) {
 		SpringApplication.run(ConsumerApplication.class, args);
 	}
@@ -19,8 +22,12 @@ public class  ConsumerApplication {
 
 @Log4j2
 @Service
-@RocketMQMessageListener(topic = "greetings-topic",
-	consumerGroup = "greetings-consumer-group")
+@RocketMQMessageListener(
+	topic = "greetings-topic",
+	selectorExpression = " letter = 'm' ",
+	selectorType = SQL92,
+	consumerGroup = "greetings-consumer-group"
+)
 class GreetingsConsumer implements RocketMQListener<Greeting> {
 
 	@Override
