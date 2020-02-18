@@ -52,7 +52,6 @@ public class ProducerApplication {
 	}
 }
 
-
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
