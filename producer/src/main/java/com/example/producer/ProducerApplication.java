@@ -34,9 +34,10 @@ public class ProducerApplication {
 
 					@Override
 					public Message<?> postProcessMessage(Message<?> message) {
+						var headerValue = Character.toString(name.toLowerCase().charAt(0));
 						return MessageBuilder
 							.fromMessage(message)
-							.setHeader("letter", name.toLowerCase().charAt(0))
+							.setHeader("letter", headerValue)
 							.build();
 					}
 				};

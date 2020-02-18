@@ -24,18 +24,17 @@ public class ConsumerApplication {
 @Service
 @RocketMQMessageListener(
 	topic = "greetings-topic",
-	selectorExpression = " letter = 'm' ",
+	selectorExpression = " letter = 'm' or letter = 'k' or letter = 't' ",
 	selectorType = SQL92,
-	consumerGroup = "greetings-consumer-group"
+	consumerGroup = "sql-consumer-group"
 )
-class GreetingsConsumer implements RocketMQListener<Greeting> {
+class SqlSelectorConsumer implements RocketMQListener<Greeting> {
 
 	@Override
 	public void onMessage(Greeting greeting) {
-		log.info("new message: " + greeting.toString());
+		log.info("'m', 'k', 't': " + greeting.toString());
 	}
 }
-
 
 @Data
 @AllArgsConstructor
