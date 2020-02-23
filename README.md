@@ -1,4 +1,4 @@
-# Spring Tips (Apache RocketMQ)
+# Spring Tips: Apache RocketMQ
 
 ## Running Apache RocketMQ 
 
@@ -216,14 +216,4 @@ class JSqlSelectorConsumer implements RocketMQListener<Greeting> {
 
 ```
 
-Not bad, eh? There's plenty of other things that Apache RocketMQ supports (besides processing trillions of messages in 24 hours!) It can store long tail messages on disk, without degrading performance. It supports serialization - the ordering of - of messages, transactions,  batch processing, etc. It even supports scheduled messages - messages that are only delivered after a certain interval. Needless to say, I'm a big Apache RocketMQ fan. 
-
-
-
-
-
-
-
-
-
-
+Not bad, eh? There's plenty of other things that Apache RocketMQ supports (besides processing trillions of messages in 24 hours!) It can store long tail messages on disk, without degrading performance. It supports serialization - the ordering of - of messages, transactions,  batch processing, etc. It even supports scheduled messages - messages that are only delivered after a certain interval. Needless to say, I'm a big Apache RocketMQ fan.  
